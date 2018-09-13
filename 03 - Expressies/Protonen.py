@@ -1,1 +1,1 @@
-print('Protonen: ' + str(10**86))
+print(21/6)
