@@ -1,41 +1,23 @@
-worp_1a = int(input('worp 1 aanvaller: '))
-worp_2a = int(input('worp 2 aanvaller: '))
-worp_3a = int(input('worp 3 aanvaller: '))
-worp_4b = int(input('worp 1 verdediger: '))
-worp_5b = int(input('worp 2 verdediger: '))
+a1 = int(input('worp 1 aanvaller: '))
+a2 = int(input('worp 2 aanvaller: '))
+a3 = int(input('worp 3 aanvaller: '))
+v1 = int(input('worp 1 verdediger: '))
+v2 = int(input('worp 2 verdediger: '))
 
-totaal_a = worp_1a + worp_2a + worp_3a
-totaal_b = worp_4b + worp_5b
+#sorteren
+sa1 = max(a1, a2, a3)
+sa2 = a1 + a2 + a3 - sa1 - min(a1, a2, a3)
 
-max_a = max(worp_1a, worp_2a, worp_3a)
-max_b = max(worp_4b, worp_5b)
-x = [worp_1a, worp_2a, worp_3a]
-middel_a = sorted(x)[len(x) // 2]
-middel_b = min(worp_4b, worp_5b)
+sv1 = max(v1, v2)
+sv2 = min(v1, v2)
 
-if max_a == max_b and middel_a == middel_b:
-    print('aanvaller verliest 2 legers, verdediger verliest 0 legers')
+#winnaar bepalen
+if sa1 > sv1 and sa2 > sv2:
+    mes = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
+elif sa1<= sv1 and sa2 <= sv2:
+    mes = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+else:
+    mes = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
 
-elif max_a > max_b and middel_a > middel_b:
-    print('aanvaller verliest 0 legers, verdediger verliest 2 legers')
-
-elif max_a > max_b and middel_a < middel_b:
-    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
-
-elif max_a < max_b and middel_a > middel_b:
-    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
-
-elif max_a < max_b and middel_a < middel_b:
-    print('aanvaller verliest 2 legers, verdediger verliest 0 legers')
-
-elif max_a == max_b and middel_a < middel_b:
-    print('aanvaller verliest 2 legers, verdediger verliest 0 legers')
-
-elif max_a == max_b and middel_a > middel_b:
-    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
-
-elif max_a < max_b and middel_a == middel_b:
-    print('aanvaller verliest 2 legers, verdediger verliest 0 legers')
-
-elif max_a > max_b and middel_a == middel_b:
-    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
+#uitvoer
+print(mes)
