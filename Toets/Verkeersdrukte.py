@@ -9,11 +9,11 @@ pv = min((vv * dv) / 40, 1)
 pa = min((va * da) / 40, 1)
 
 #bewerking
-if min(pv, pa) >= 0.7:
+if min(pv, pa) > 0.7:
     code = 'zwart'
 elif max(pv, pa) > 0.7 and abs(pa - pv) < 0.2:
     code = 'rood'
-elif abs(pv - pa) >= 0.7:
+elif abs(pv - pa) > 0.7:
     code = 'geel'
 else:
     code = 'groen'

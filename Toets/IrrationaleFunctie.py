@@ -4,7 +4,7 @@ x = float(input('Geef een reëel getal x: '))
 
 #bewerking
 if x < 2:
-    uitkomst = '{:.2f}'.format(x) + ' NOT AN ELEMENT OF dom(f)'
+    uitkomst = '{:.2f}'.format(x) + ' ∉ dom(f)'
 elif x == 2:
     uitkomst = '{:.2f}'.format(x) + ' is nulpunt van f'
 else:
