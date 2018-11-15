@@ -1,9 +1,9 @@
 #invoer
 n = int(input('Hoeveel getallen? '))
-max = 0
-som = 0
+max = int(input('getal: '))
+som = max
 
-for i in range(n):
+for i in range(n - 1):
     getal = int(input('Geef een geheel getal: '))
     if i == 0:
         max = getal
@@ -15,7 +15,4 @@ for i in range(n):
 gemiddelde = round((som / n ), 2)
 
 #uitvoer
-print('{} {:d} {} {:.2f}'.format('Het grootste getal is', max, 'en het gemiddelde is', gemiddelde))
-
-
-
+print('Het grootste getal is {} en het gemiddelde is {:.2f}'.format(max, gemiddelde))
