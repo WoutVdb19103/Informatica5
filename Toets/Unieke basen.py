@@ -24,4 +24,4 @@ if aantal_verschillende == 1:
     print('De DNA-keting bevat 1 soort base: ', base)
 
 else:
-    print('De DNA-keting bevat', aantal_verschillende, 'verschillende soorten basen: {} {} {} {}'.format(basea, basec, baseg, baset))
+    print('De DNA-keting bevat' + aantal_verschillende + 'verschillende soorten basen: {} {} {} {}'.format(basea, basec, baseg, baset))
