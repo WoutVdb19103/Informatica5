@@ -8,16 +8,16 @@ def dronken_voeren(woord):
 
     for i in range(1, len(woord)):
 
-            if i % 2 == 0:
+        #even woord?
+        if i % 2 == 0:
+            nieuw_woord += woord[i].upper()
 
-                nieuw_woord += woord[i].upper()
+        #oneven letter en vorige(even)letter is hoofdletterklinker op einde nieuw woord
+        elif nieuw_woord[-1] in 'AEIOU':
+            nieuw_woord += woord[i].upper()
 
-            elif nieuw_woord[-1] in 'AEIOU':
-                nieuw_woord += woord[i].upper()
-
-            else:
-                nieuw_woord += woord[i].lower()
+        #oneven letter
+        else:
+            nieuw_woord += woord[i].lower()
 
     return nieuw_woord
-
-print(dronken_voeren('drinkeboer'))
