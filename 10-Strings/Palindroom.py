@@ -1,16 +1,13 @@
-def is_palindroom(woord):
-    kaas = True
+def palindroom(woord):
 
-    if len(woord) == 1:
-        kaas = True
-    else:
-        for i in range(len(woord) // 2):
+    return woord == woord[::-1]
 
-            if woord[i] == woord[-i - 1] and kaas != False:
-                kaas = True
+    #i = 0
 
-            else:
-                kaas = False
+    #while woord[i] == woord[-i -1] and i < len(woord) // 2:
+     #   i += 1
 
-    return kaas
+    #!!! belangrijk !!!
+    #return i == (len(woord) // 2)
 
+print(palindroom(10000000000 * 'a'))
