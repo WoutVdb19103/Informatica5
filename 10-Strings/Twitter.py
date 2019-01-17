@@ -12,3 +12,17 @@ while '#' in tweet:
 
     print(woord)
 
+#tweet = input('geef tweet: ')
+#
+#i_hashtag = tweet.find('#')
+#
+#while i_hashtag != -1:
+#    # tweet afknippen na het #-teken
+#    tweet = tweet[i_hashtag + 1:]
+#    i_spatie = tweet.find(' ')
+#
+#    # hashtag uiknippen en printen
+#    print(tweet[:i_spatie])
+#
+#    # terug op zoek naar een hashtag
+#    i_hashtag = tweet.find('#')
