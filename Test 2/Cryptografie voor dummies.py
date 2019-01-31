@@ -1,7 +1,7 @@
 #    nieuw_woord = woord.upper()
 #
 #    for i in range(len(nieuw_woord)):
-#        ord_letter = ord(nieuw_woord[i]) + n
+#        ord_letter = chr(ord(nieuw_woord[i]) + n)
 #        nieuw_woord = nieuw_woord.replace(nieuw_woord[i],chr(ord_letter))
 #
 #    return nieuw_woord
@@ -23,20 +23,31 @@
 #print(versleutel_zin('ik eet kaas', 6))
 
 def versleutel_woord(woord, n):
+    code = ''
+    for letter in woord.upper():
 
-    versleuteld_woord = ''
-
-    woord = woord.upper()
-
-    for letter in woord:
-
-        versleutelde_letter = chr(ord(letter) + n)
+        code_letter = chr(ord(letter) + n)
 
         if versleutelde_letter == '@':
             versleutelde_letter = ' '
-
-        versleuteld_woord += versleutelde_letter
+        code += code_letter
 
     return versleuteld_woord
+
+def versleutel_zin(zin, getal):
+    index_spatie = zin.find(' ')
+    code = ''
+
+    while index_spatie != -1:
+        woord = zin[:index_spatie]
+        zin = zin[index_spatie + 1]
+
+        code += '@' + versleutel_woord(woord, getal)
+        index_spatie = zin.find(' ')
+
+    if len(zin) > 0:
+        code += '@' + versleutel_woord(zin, getal)
+
+    return code
 
 print(versleutel_woord('kaas', 1))

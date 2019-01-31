@@ -18,6 +18,6 @@ def ontdubbelen(woord):
         if woord[i] != woord[i - 1]:
             nieuw_woord += woord[i]
 
-    return nieuwe_woord
+    return nieuw_woord
 
 print(ontdubbelen('kaassseeennn'))
