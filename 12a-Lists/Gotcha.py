@@ -40,4 +40,4 @@ def ik_heb_gemoord(lijst, moordenaar):
 
     return lijst, lijst[index_nieuw_doel]
 
-print(ik_heb_gemoord(['jan', 'piet', 'joris', 'korneel'], 'korneel'))
+print(ik_heb_gemoord(['jan', 'piet', 'joris', 'korneel', 'kaas'], 'korneel'))
