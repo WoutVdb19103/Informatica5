@@ -7,4 +7,14 @@ def faculteit(n):
         print('{} * {} = {}'.format(n, res, n * res))
         return n * res
 
-print(faculteit(6))
+def is_palindroom(w):
+
+    if len(w) == 1 or len(w) == 0:
+        return True
+    else:
+        print('{} == {} and is_palindroom({})'.format(w[0], w[-1], w[1 : -1]))
+        res = is_palindroom(w[1 : -1])
+        print('{} and {}'.format(w[0] == w[-1], res))
+        return w[0] == w[-1] and res
+
+print(is_palindroom('koortsmeetzysteemstrook'))
